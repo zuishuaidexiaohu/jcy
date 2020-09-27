@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>录入结果展示</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./insertResult/style.css">
+    <script src="/app.config.js"></script>
+</head>
+<body>
+<div class="layui-fluid" id="div_fluid">
+    <div class="layui-row" id="div_row">
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6 div_col">
+            <div class="container">
+                <div id="showContent">
+                    <div><span id="caseName"></span>案件</div>
+                    <div>案件号：<span id="caseNumber"></span></div>
+                    <div>嫌疑人姓名：<span id="casePrisoner"></span></div>
+                    <div>承办人：<span id="loader"></span></div>
+                    <div>
+                        <button id="insertBtu" onclick="showWindow();"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6 div_col">
+            <div class="container">
+                <div class="showTable" >
+                    <div class="layui-row" id="showTableContainer">
+                        <div class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-lg10
+                            layui-col-xs-offset1  layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+                            <table class="layui-table" id="infoTable" lay-filter="infoTableFilter"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="showWindow" style="display: none;">
+    <div class="layui-row" id="tableContent">
+        <div class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8
+layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2" style="padding-left: 16px;">
+            <table id="infoInsertTable" lay-filter="infoInsertTableFilter"></table>
+        </div>
+    </div>
+
+    <div class="layui-row" id="btnContent">
+        <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5
+layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1" style="text-align: center">
+            <button id="insert" type="button" onclick="insert();"></button>
+        </div>
+        <div class="layui-col-xs5 layui-col-sm5 layui-col-md5 layui-col-lg5" style="text-align: center">
+            <button id="cancel" type="button" onclick="closeWindow();"></button>
+        </div>
+    </div>
+    <div id="insertWindowClose" onclick="closeWindow();"></div>
+</div>
+</body>
+<script src="/lib/jquery-3.3.1.js"></script>
+<script src="/assest/js/public.js"></script>
+<script src="../lib/layui/layui.js"></script>
+<script src="./insertResult/index.js"></script>
+<script id="selectNum" type="text/html">
+    <icon class="fa fa-minus-circle fa-2x" lay-event="minus"></icon>
+    <span style="color:#333333;font-size: 18px">{{d.num}}</span>
+    <icon class="fa fa-plus-circle fa-2x" lay-event="plus"></icon>
+</script>
+</body>
+</html>

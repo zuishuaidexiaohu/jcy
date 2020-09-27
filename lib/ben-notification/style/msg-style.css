@@ -1,0 +1,73 @@
+
+/**
+    SmartBox
+ */
+
+#divSmallBoxes {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999999
+}
+
+.SmallBox {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    width: 420px;
+    color: #FFF;
+    z-index: 9999;
+    overflow: hidden;
+    border: 1px solid transparent;
+    min-height: 65px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.SmallBox:hover {
+    border: 1px solid #FFF;
+    cursor: pointer
+}
+
+.SmallBox .foto {
+    font-size: 50px;
+    position: absolute;
+    left: 17px
+}
+
+.SmallBox .textoFull {
+    width: 93%;
+    float: left;
+    padding-left: 20px
+}
+
+.SmallBox .textoFoto {
+    width: 78%;
+    margin: 3px 20px 3px 80px;
+    float: left;
+}
+
+.miniPic {
+    position: absolute;
+    bottom: 8px;
+    right: 9px
+}
+
+.miniIcono {
+    height: 100%;
+    font-size: 20px
+}
+
+.SmallBox span {
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    display: block;
+    margin: 4px 0
+}
+
+.SmallBox p {
+    font-size: 13px;
+    margin-top: 2px
+}
+

@@ -1,0 +1,62 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background: url("../../assest/image/contentBg.jpg") no-repeat center center;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    /*background-size: cover;*/
+}
+
+
+#oneDayTip{
+    height: 80%;
+    width: 80%;
+    background: url("../../assest/image/oneDayTip.png") no-repeat  center center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-size: 100% 100%;
+}
+
+#oneDayTipContainer {
+    width: 450px;
+    overflow: hidden;
+    height: 100%;
+}
+
+#oneDayTipContentScroll{
+    width: 450px;
+    height: 40%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 17px;
+    margin-top: 90px;
+}
+
+
+#oneDayTipContentGroup{
+    width: 445px;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.oneDayTipContent{
+    margin-top: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1;
+    min-height: 30px;
+}
+

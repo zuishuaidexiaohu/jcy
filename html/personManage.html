@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员管理</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" type="text/css">
+
+    <link rel="stylesheet" href="/lib/layui_exts/formSelect/formSelects-v4.css">
+    <link rel="stylesheet" href="./personManage/style.css">
+    <script src="/app.config.js"></script>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row" id="searchForm">
+        <form class="layui-form">
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2
+ layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+                <div class="layui-block">
+                    <input type="text" class="layui-input" autocomplete="off" placeholder="请输入姓名" id="searchName">
+                </div>
+            </div>
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2">
+                <div class="layui-block" style="text-align: right">
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="search()">查询</button>
+
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="resetTable();">重置</button>
+                    <button class="layui-btn layui-btn-radius" type="reset" id="resetSearchForm" style="display: none;">
+                        重置
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="layui-row">
+
+        <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg1
+            layui-col-xs-offset5 layui-col-sm-offset5 layui-col-md-offset5 layui-col-lg-offset8">
+            <div class="layui-block" style="text-align: right">
+                <button class="layui-btn layui-btn-radius" type="button" onclick="showDepartmentWindow()">部门展示</button>
+            </div>
+        </div>
+        <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg1">
+            <div class="layui-block" style="text-align: right">
+                <button class="layui-btn layui-btn-radius" type="button"
+                        onclick="showWindow('/assest/image/personInsertTitle.png','insert');">新增人员
+                </button>
+            </div>
+        </div>
+        <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg1">
+            <div class="layui-block" style="text-align: right">
+                <button class="layui-btn layui-btn-radius" type="button" onclick="del();">删除选中</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-lg10
+            layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+            <table class="layui-table" id="infoTable" lay-filter="infoTableFilter"></table>
+        </div>
+    </div>
+</div>
+
+<div id="personWindow" style="display: none">
+
+    <div id="windowTitle">
+        <img src="../assest/image/personInsertTitle.png" id="personTitle" height="45px">
+    </div>
+    <div class="layui-row" id="windowForm">
+        <div class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8
+        layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2">
+            <form class="layui-form">
+                <input type="hidden" class="layui-input" name="id" autocomplete="off">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">姓名:</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="username" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">IC卡编号:</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" name="icNumber" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">系统角色:</label>
+                    <div class="layui-input-block">
+                        <!--<input type="text" class="layui-input" name="role"  autocomplete="off">-->
+                        <select name="role" lay-filter="roleFilter"></select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">部门:</label>
+                    <div class="layui-input-block">
+                        <!--<input type="text" class="layui-input" name="department"  autocomplete="off">-->
+                        <select name="department" lay-filter="departmentFilter"></select>
+
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">柜号:</label>
+
+                    <div class="layui-input-block">
+                        <!---->
+                        <select name="containerNumber" xm-select="containerNumberSelectId"
+                                xm-select-show-count="2" xm-select-search-type="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                        </select>
+                    </div>
+                </div>
+                <!--<div class="layui-form-item">-->
+                <!--<label class="layui-form-label">身份:</label>-->
+                <!--<div class="layui-input-block">-->
+                <!--<input type="text" class="layui-input" name=""  autocomplete="off">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div style="display: none">
+                    <button class="layui-btn layui-btn-disabled" lay-submit lay-filter="updateORInsert"
+                            id="save"
+                            type="button">保存
+                    </button>
+                    <button class="layui-btn layui-btn-primary" type="reset" id="reset">取消
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="layui-row" id="windowBtn">
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4
+        layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2" style="text-align: center">
+            <button class="layui-btn" type="button" id="insert" onclick="$('#save').click();"></button>
+        </div>
+
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4" style="text-align: center">
+            <button class="layui-btn" type="button" id="cancel" onclick="closeWindow();"></button>
+        </div>
+    </div>
+</div>
+
+
+<div id="personDelWindow" style="display: none">
+
+    <div id="windowDelTitle">
+        <img src="../assest/image/person/delTitle.png" id="delTitle" height="45px">
+    </div>
+    <div class="layui-row" id="windowDelBtn">
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4
+        layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2" style="text-align: center">
+            <button class="layui-btn" type="button" id="del" onclick="delData();"></button>
+        </div>
+
+        <div class="layui-col-xs4 layui-col-sm4 layui-col-md4 layui-col-lg4" style="text-align: center">
+            <button class="layui-btn" type="button" id="cancelDel" onclick="closeDelWindow();"></button>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="departmentWindow" style="display: none">
+    <div id="departmentWindowTitle" style="text-align: center;margin-top: 45px;font-size: 33px;letter-spacing: 17px;">
+        <span>部门展示</span>
+    </div>
+    <div class="layui-row" style="margin-top: 2px;">
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6
+layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2">
+            <input type="text" class="layui-input" name="description" placeholder="请输入部门" autocomplete="off">
+        </div>
+
+        <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2" style="text-align: center">
+            <button class="layui-btn layui-btn-sm" type="button" onclick="insertDepartment();" style="    border-radius: 10px;
+    height: 38px;">新增
+            </button>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8
+layui-col-xs-offset2 layui-col-sm-offset2 layui-col-md-offset2 layui-col-lg-offset2">
+            <table class="layui-table" id="departmentTable" lay-filter="departmentTableFilter"></table>
+        </div>
+    </div>
+
+    <div id="departmentWindowClose" style="text-align: center;">
+        <button class="layui-btn layui-btn-sm" type="button" onclick="closeDepartment();"
+                style="    border-radius: 10px; height: 38px;    width: 100px;font-size: 21px;">关闭
+        </button>
+    </div>
+
+
+</div>
+<script src="/lib/jquery-3.3.1.js"></script>
+<script src="../lib/layui/layui.js"></script>
+<script src="/assest/js/public.js"></script>
+<script src="/lib/layui_exts/formSelect/formSelects.js"></script>
+<script src="./personManage/index.js"></script>
+<script type="text/html" id="operateBtn">
+    <a class="layui-btn layui-btn-xs layui-btn-radius layui-btn" lay-event="edit">修改</a>
+</script>
+</body>
+</html>

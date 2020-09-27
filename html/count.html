@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计菜单</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="./count/style.css">
+    <script src="/app.config.js"></script>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div id="monthCountTitle"></div>
+        </div>
+    </div>
+    <div class="layui-row" id="monthCountSearch">
+        <form class="layui-form">
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2">
+                <div class="layui-block">
+                    <input type="text" class="layui-input" id="month" autocomplete="off" placeholder="请选择时间"  name="">
+                </div>
+            </div>
+            <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1">
+                <div class="layui-block" style="text-align: right">
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="loadSaveAndTake()">查询</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="layui-row" id="monthCountShow">
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6">
+            <div class="layui-row">
+                <div class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-lg10
+  layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+                    <div id="saveChart" style="height:300px;"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md6 layui-col-lg6">
+            <div class="layui-row">
+                <div class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-lg10
+  layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+                    <div id="takeChart"  style="height:300px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div id="deptCountTitle"></div>
+        </div>
+    </div>
+    <div class="layui-row" id="deptCountSearch">
+        <form class="layui-form">
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2">
+                <div class="layui-block">
+                    <input type="text" class="layui-input" id="deptTime" autocomplete="off" placeholder="请选择时间"  name="">
+                </div>
+            </div>
+            <div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1">
+                <div class="layui-block" style="text-align: right">
+                    <button class="layui-btn layui-btn-radius" onclick="loadDept();" type="button">查询</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="layui-row" id="deptCountShow">
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-lg12">
+            <div id="deptChart" style="height:300px;"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="/lib/jquery-3.3.1.js"></script>
+<script src="/assest/js/public.js"></script>
+<script src="/lib/echart/echarts.min.js"></script>
+<script src="../lib/layui/layui.js"></script>
+<script src="./count/index.js"></script>
+</body>
+</html>

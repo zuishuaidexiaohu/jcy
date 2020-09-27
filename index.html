@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>主页</title>
+    <link rel="stylesheet" href="lib/layui/css/layui.css">
+    <link rel="stylesheet" href="html/index/style.css">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+    <script src="/lib/iconfont/iconfont.js"></script>
+    <script src="./app.config.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo" onclick="window.location.reload();"></div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item userManage" id="userManage">
+                <a href="javascript:;">
+                    <img src="assest/image/user.png" class="layui-nav-img">
+                    <span id="username"></span>
+                </a>
+               <!-- <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改密码</a></dd>
+                </dl>-->
+
+                <div id="editPasswordContainer">
+                    <form action="" class="layui-form" style="line-height: 26px;">
+                       <span style="color: black;font-size: 20px;font-weight: 700; letter-spacing: 5px;">修改密码</span>
+
+                        <hr style="height: 1px;
+    background: #0000007d;">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">原始密码：</label>
+                            <div class="layui-input-block">
+                                <input type="password" class="layui-input" name="oldPassword" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">新的密码：</label>
+                            <div class="layui-input-block">
+                                <input type="password" class="layui-input" name="newPassword" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认密码：</label>
+                            <div class="layui-input-block">
+                                <input type="password" class="layui-input" name="commitPassword" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div style="text-align: center;">
+                               <button class="layui-btn layui-btn-sm" type="button" onclick="updatePassword();" style="margin-right: 70px;">确定</button>
+                               <button class="layui-btn layui-btn-sm" type="reset" >重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="over-lay"></div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    角色：<span id="role"></span>
+                </a>
+            </li>
+            <li class="layui-nav-item"><a href="javascript:;" onclick="_m.logout();">
+                <img src="assest/image/exit.png" height="35px">
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree" lay-filter="menuNav" id="menu">
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="layui-nav-item-a" id="showHomepage"
+                       onclick="setIframe('html/homepage.html')">
+                        <div class="layui-nav-item-a-icon">
+                            <span class="icon iconfont">&#xe616;</span>
+                        </div>
+                        <div class="layui-nav-item-a-title">
+                            <span class=""> 首页</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="layui-nav-item-a" onclick="setIframe('html/caseFile.html')">
+                        <div class="layui-nav-item-a-icon">
+                            <span class="icon iconfont">&#xe674;</span>
+                        </div>
+                        <div class="layui-nav-item-a-title">
+                            <span class=""> 录入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="layui-nav-item-a"
+                       onclick="setIframe('html/caseFile_enter.html')">
+                        <div class="layui-nav-item-a-icon">
+                            <span class="icon iconfont">&#xe629;</span>
+                        </div>
+                        <div class="layui-nav-item-a-title">
+                            <span class="">入库卷宗</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="layui-nav-item-a"
+                       onclick="setIframe('html/count.html')">
+                        <div class="layui-nav-item-a-icon">
+                            <span class="icon iconfont">&#xe617;</span>
+                        </div>
+                        <div class="layui-nav-item-a-title">
+                            <span class="">统计菜单</span>
+                        </div>
+                    </a>
+                </li>
+
+                <!--<li class="layui-nav-item">-->
+                    <!--<a href="javascript:;" class="layui-nav-item-a"-->
+                       <!--onclick="setIframe('html/operateLog.html')">-->
+
+                        <!--<div class="layui-nav-item-a-icon">-->
+                            <!--<span class="icon iconfont">&#xe636;</span>-->
+                        <!--</div>-->
+                        <!--<div class="layui-nav-item-a-title">-->
+                            <!--<span class="">操作记录</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="layui-nav-item display_none" id="personManage" >
+                    <a href="javascript:;" class="layui-nav-item-a"
+                       onclick="setIframe('html/personManage.html')">
+                        <div class="layui-nav-item-a-icon">
+                            <span class="icon iconfont">&#xe64c;</span>
+                        </div>
+                        <div class="layui-nav-item-a-title">
+                            <span class="">人员管理</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <iframe src="" id="turnIframe" width="100%" height="98%"></iframe>
+    </div>
+</div>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="lib/layui/layui.js"></script>
+<script src="assest/js/public.js"></script>
+<script src="html/index/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+    /*background: url("../../assest/image/contentBg.jpg") no-repeat;*/
+}
+
+
+#monthCountTitle{
+    background: url("../../assest/image/monthCount.png") no-repeat;
+    width: 313px;
+    height: 108px;
+}
+
+
+#monthCountSearch {
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+#monthCountShow{
+    height: 300px;
+}
+
+
+#deptCountTitle{
+    background: url("../../assest/image/deptCount.png") no-repeat;
+    width: 317px;
+    height: 107px;
+}
+
+
+#deptCountSearch {
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+#deptCountShow{
+    height: 300px;
+}
+
+.layui-input {
+    border-radius: 100px;
+    border-color: #808080;
+    background-color: transparent;
+}
+
+
+.layui-form-select dl {
+    background-color: #f5f0ec;
+}
+
+.layui-form-select dl dd:hover {
+    background-color: #84625c;
+    /*color: #84625c;*/
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #5a5959;
+}
+
+.layui-laydate, .layui-laydate-hint {
+    background-color: #f5f0ec !important;
+}
+
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #5a5959;
+}
+
+.layui-btn {
+    background-color: gray;
+}
+
+.layui-table thead tr{
+    background-color: #4a4848;
+    color: white;
+}
+
+.layui-laydate-content td.laydate-selected {
+    background-color: #d1c1b2 !important;
+}

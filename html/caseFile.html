@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卷宗</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" type="text/css">
+    <link rel="stylesheet" href="./caseFile/style.css">
+    <script src="/app.config.js"></script>
+</head>
+<body>
+<div class="layui-fluid">
+    <form class="layui-form">
+        <div class="layui-row layui-col-space20" id="searchForm">
+
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2
+ layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+                <div class="layui-block">
+                    <input type="text" class="layui-input" autocomplete="off" placeholder="请输入受案号或案件名称" name="bmsah">
+                </div>
+            </div>
+
+            <div class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2">
+                <div class="layui-block">
+                    <input type="text" class="layui-input" autocomplete="off" placeholder="请输入受理时间" id="searchDate"
+                           name="searchDate">
+                </div>
+            </div>
+            <div class="layui-col-xs3 layui-col-sm3 layui-col-md3 layui-col-lg3">
+                <div class="layui-block" style="text-align: center">
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="search();">查询</button>
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="resetTable();">重置</button>
+                    <button class="layui-btn layui-btn-radius" type="reset" id="reset" style="display: none;">重置
+                    </button>
+                    <button class="layui-btn layui-btn-radius" type="button" onclick="insert();">录入</button>
+                </div>
+            </div>
+            <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1">-->
+            <!--<div class="layui-block" style="text-align: right">-->
+            <!---->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="layui-col-xs1 layui-col-sm1 layui-col-md1 layui-col-lg1">-->
+            <!--<div class="layui-block" style="text-align: right">-->
+            <!---->
+            <!--</div>-->
+            <!--</div>-->
+
+        </div>
+    </form>
+    <div class="layui-row">
+        <div class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-lg10
+            layui-col-xs-offset1 layui-col-sm-offset1 layui-col-md-offset1 layui-col-lg-offset1">
+            <table class="layui-table" id="infoTable" lay-filter="infoTableFilter"></table>
+        </div>
+    </div>
+</div>
+<script src="/lib/jquery-3.3.1.js"></script>
+<script src="../lib/layui/layui.js"></script>
+<script src="/assest/js/public.js"></script>
+<script src="./caseFile/index.js"></script>
+</body>
+</html>

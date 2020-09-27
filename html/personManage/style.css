@@ -1,0 +1,238 @@
+body {
+    /*background: url("../../assest/image/contentBg.jpg") no-repeat fixed;*/
+    /*background-size: 100% 100%;*/
+}
+
+
+#searchForm{
+    margin-top: 20px;
+}
+
+
+.layui-btn {
+    background-color: gray;
+}
+
+.layui-input {
+    border-radius: 100px;
+    border-color: #808080;
+    background-color: transparent;
+}
+
+
+.layui-form-select dl {
+    background-color: #f5f0ec;
+    height: 190px;
+}
+
+.layui-form-select dl dd:hover {
+    background-color: #84625c;
+    /*color: #84625c;*/
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #5a5959;
+}
+
+.layui-laydate, .layui-laydate-hint {
+    background-color: #f5f0ec !important;
+}
+
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #5a5959;
+}
+
+
+.layui-layer-title,.layui-layer-setwin{
+    display: none;
+}
+
+.layui-layer {
+
+    background-color: transparent !important;
+}
+
+
+
+#personWindowId{
+    background:  url("../../assest/image/personInsertWindowBg.png") no-repeat center center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 0px !important;
+}
+
+
+
+
+#windowTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 45px;
+}
+
+#windowForm {
+    margin-top: 40px;
+}
+
+.layui-form-label{
+    font-size: 18px;
+}
+
+#windowForm  .layui-input {
+    border-radius: 0px;
+    border: 0px solid #2b0c0c;
+    border-bottom-width: 1px;
+    background-color: transparent;
+}
+
+#windowBtn{
+    margin-top: 30px;
+}
+
+#insert {
+    width: 110px;
+    height: 60px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/personInsertBtn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#cancel {
+    width: 110px;
+    height: 60px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/personEditBtn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+#personDelWindowId{
+    background:  url("../../assest/image/personDelWindowBg.png") no-repeat center center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 0px !important;
+}
+
+
+#windowDelTitle{
+    text-align: right;
+    margin-top: 90px;
+    padding-right: 40px;
+}
+
+#windowDelBtn{
+    margin-top: 90px;
+    padding-left: 102px;
+}
+
+
+
+#del {
+    width: 85px;
+    height: 45px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/person/delCommitBtn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#cancelDel {
+    width: 85px;
+    height: 45px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/person/delCancelBtn.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+
+.layui-table {
+
+    background-color: transparent;
+}
+
+.layui-table th, .layui-table td, .layui-table[lay-skin="line"],
+.layui-table[lay-skin="row"], .layui-table-view, .layui-table-tool,
+.layui-table-header, .layui-table-col-set, .layui-table-total,
+.layui-table-page, .layui-table-fixed-r, .layui-table-tips-main, .layui-table-grid-down {
+    border: 1px dashed #242121;
+}
+
+.layui-table-header table tr {
+    color:white;
+}
+.layui-table thead tr, .layui-table-header, .layui-table-tool,
+.layui-table-total, .layui-table-total tr, .layui-table-patch,
+.layui-table-mend, .layui-table[lay-even] tr:nth-child(even),
+.layui-table tbody tr:hover, .layui-table-hover, .layui-table-click {
+    background-color: #5a5959;
+    color: white;
+}
+
+
+.layui-table-init{
+    background: transparent !important;
+}
+
+
+#departmentWindowId{
+    background:  url("../../assest/image/personInsertWindowBg.png") no-repeat center center;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 0px !important;
+}
+
+
+.xm-select-dl {
+    height: 160px;
+}
+
+.xm-select-title  .xm-input{
+    background: transparent  !important;
+    border-radius: 0px;
+    border: 0px  !important;
+    border-bottom: 1px solid  !important;
+}
+.xm-select--suffix+div{
+    background: transparent;
+}
+.xm-select-parent .xm-form-select dl{
+    background-color: #e1ccac !important;
+}
+
+.xm-select-tips{
+    background-color: #e1ccac;
+}
+
+
+div[xm-select-skin] .xm-select-title div.xm-select-label>span {
+    border: 1px solid #181919;
+}
+
+.xm-select-parent .xm-select-title div.xm-select-label>span {
+
+    background-color: #171919a6;
+}
+
+
+.xm-select-parent dl dd.xm-select-this div i {
+
+    color: #1c1f1f9c;
+
+}
+
+
+.xm-select-parent .xm-form-select dl dd:hover {background-color: rgba(132, 98, 92, 0.65)
+}
+
+.xm-form-checkbox:hover > i {
+    border-color: #202321b3;
+}
+
+.xm-form-checkbox > i {
+    border: 1px solid #282f2a;
+}

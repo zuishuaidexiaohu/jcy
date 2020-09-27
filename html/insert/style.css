@@ -1,0 +1,136 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background: url("../../assest/image/contentBg.jpg") no-repeat fixed;*/
+    /*background-size: 100% 100%;*/
+    overflow: auto;
+}
+
+#insertBg {
+    background: url(../../assest/image/insertBg.png) no-repeat;
+    background-size: 100% 100%;
+    width: 1065px;
+    height: 570px;
+    position: absolute;
+    left: 220px;
+    top: 47px;
+}
+
+#insertContent {
+    width: 320px;
+    height: 378px;
+    position: absolute;
+    bottom: 106px;
+    right: 135px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insertContent div{
+    margin-top: 34px;
+    font-size: 18px;
+}
+
+#insertBtu {
+    width: 185px ;
+    height: 48px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/insertBtnBg.png") no-repeat;
+}
+
+
+.layui-layer-title,.layui-layer-setwin{
+    display: none;
+}
+
+.layui-layer{
+    background:  url("../../assest/image/insertWindowBg.png") no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 0px !important;
+    background-color: transparent !important;
+}
+
+
+#insertWindowClose{
+    background: url("../../assest/image/insertWindowCloseBg.png") no-repeat;
+    background-size: 100% 100%;
+    width: 70px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    right: -2px;
+}
+
+#showWindowId{
+    overflow: hidden;
+}
+
+#tableContent{
+    position: absolute;
+    top: 106px;
+    width: 100%;
+}
+
+.layui-table td, .layui-table th, .layui-table-col-set, .layui-table-fixed-r,
+.layui-table-grid-down, .layui-table-header, .layui-table-page, .layui-table-tips-main,
+.layui-table-tool, .layui-table-total, .layui-table-view, .layui-table[lay-skin=line],
+.layui-table[lay-skin=row] {
+    border: 1px dashed #5a5959;
+}
+
+.layui-table-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: -16px;
+}
+
+.layui-table {
+    background-color: transparent;
+}
+
+.layui-table-header table tr {
+    color:white;
+}
+
+.layui-table-body table tr {
+    color:#333333;
+}
+.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click,
+.layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch,
+.layui-table-tool, .layui-table-total, .layui-table-total tr, .layui-table[lay-even] tr:nth-child(even) {
+    background-color: #5a5959;
+}
+#btnContent{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+}
+
+#insert {
+    width: 149px ;
+    height: 61px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/commitBtn.png") no-repeat;
+}
+
+
+#cancel {
+    width: 149px ;
+    height: 61px;
+    border: 0px;
+    cursor: pointer;
+    background: url("../../assest/image/cancelBtn.png") no-repeat;
+}
+
+
+
+

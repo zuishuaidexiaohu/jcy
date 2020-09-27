@@ -1,0 +1,70 @@
+body {
+    /*background: url("../../assest/image/contentBg.jpg") no-repeat;*/
+}
+
+#searchForm {
+    margin: 30px 0;
+}
+
+.layui-input {
+    border-radius: 100px;
+    border-color: #808080;
+    background-color: transparent;
+}
+
+.layui-form-select dl {
+    background-color: #f5f0ec;
+}
+
+.layui-form-select dl dd:hover {
+    background-color: #84625c;
+    /*color: #84625c;*/
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #5a5959;
+}
+
+.layui-laydate, .layui-laydate-hint {
+    background-color: #f5f0ec !important;
+}
+
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #5a5959;
+}
+
+
+.layui-btn {
+    background-color: gray;
+}
+
+.layui-table thead tr{
+    background-color: #4a4848;
+    color: white;
+}
+
+.layui-table {
+    background-color: transparent;
+}
+
+
+.layui-table th, .layui-table td, .layui-table[lay-skin="line"],
+.layui-table[lay-skin="row"], .layui-table-view, .layui-table-tool,
+.layui-table-header, .layui-table-col-set, .layui-table-total,
+.layui-table-page, .layui-table-fixed-r, .layui-table-tips-main, .layui-table-grid-down {
+    border: 1px dashed #242121;
+}
+
+
+.layui-table thead tr, .layui-table-header, .layui-table-tool,
+.layui-table-total, .layui-table-total tr, .layui-table-patch,
+.layui-table-mend, .layui-table[lay-even] tr:nth-child(even),
+.layui-table tbody tr:hover, .layui-table-hover, .layui-table-click {
+    background-color: #5a5959;
+    color: white;
+}
+
+.layui-table-init{
+    background: transparent !important;
+}

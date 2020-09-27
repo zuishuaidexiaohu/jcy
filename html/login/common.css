@@ -1,0 +1,456 @@
+html,body,iframe,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,p,blockquote,th,td{margin:0; padding:0;border: none}
+li{list-style: none;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Arial","Microsoft YaHei","SimSun",sans-serif;
+}
+:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;}
+.layui-header .title {
+    width: 200px;
+    height: 100%;
+    background-color:#2b3849;
+    color:#fff;
+    text-align: center;
+    font-size: 17px;
+    line-height: 80px;
+}
+.layui-header .nav {
+    position: absolute;
+    left: 200px;
+    height: 100%;
+    width: auto;
+    right: 0;
+    top: 0;
+    background-color:#e3eaf4;
+}
+
+.footer {
+    position: absolute;
+    font-size: 0;
+    top: 60px;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+}
+
+.layui-side {
+    position: absolute!important;
+}
+
+.layui-layout-admin .layui-footer {
+    background-color: transparent;
+    position: absolute!important;
+}
+
+.mcenter{
+    width: 1215px;
+    margin: 0 auto;
+    position: relative;
+}
+.layui-btn-xs {
+    line-height: 31px;
+}
+.active{
+    color: #fbff8d;
+}
+.titleBox li{
+    display: inline-block;
+    border: 1px solid #4BB7D5;
+    border-radius: 4px;
+    width: 100px;
+    line-height: 25px;
+    font-size: 13px;
+    text-align: center;
+    margin: 6px 0 0 8.5%;
+    background-color: #0D3E6C;
+    cursor: pointer;
+}
+.titleBox li:hover{
+    color: #fbff8d;
+    background-color: #64e7ff;
+}
+.titleBox a{
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    color: #2BDBFC;
+}
+.title1{
+    position: absolute;
+    left: 35px;
+    top: 23px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 5;
+}
+.layui-body{
+    /*min-width: 1800px!important;*/
+    overflow: hidden;
+}
+.layui-layer-title{
+    text-align: left;
+    font-weight: 600;
+    color: #fff!important;
+    /*background: url("../images/table_top.png");*/
+    background-color: #015496!important;
+}
+
+
+.layui-layer-setwin .layui-layer-close1{
+    /*background-position: -80px -40px!important;*/
+    background-position: -95px -40px!important;
+    cursor:pointer;
+}
+.layui-layer-setwin .layui-layer-min{
+    display: none;
+}
+.layui-layer-setwin .layui-layer-max{
+    background-position: -114px -40px!important;
+}
+.layui-btn+.layui-btn{
+    margin-left:5px;
+}
+.layui-table-tool{
+    position: absolute!important;
+    top: 10px!important;
+    background-color: transparent!important;
+    border: none!important;
+    width: 90px;
+    right: 35px;
+}
+.layui-table-cell{
+    padding: 0;
+}
+.layui-table, .layui-table-view{
+    margin: 0;
+}
+.mcenter .layui-form-item{
+    margin: 0;
+}
+.layui-table td, .layui-table th{
+    text-align: center;
+    padding: 9px 10px 9px 10px;
+}
+.mcenter .line{height: 4px;background-color: #03cecc;margin-bottom: 10px;margin-top:10px;}
+.mcenter .line i{cursor: pointer;color: #000000;position: absolute;top: 17px;left: 12px;z-index: 1;}
+.layui-table thead tr{
+    background-color: #e9f0f8;
+    color: #808080;
+}
+.layui-table[lay-even] tr:nth-child(even){background-color: #f2f8ff;}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{background-color: #2a93ff;}
+.layui-btn{background:linear-gradient(#015dbb,#59aafe); color:white;height: 35px;}
+.layui-form-select dl dd.layui-this,.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-nav-child dd.layui-this a, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover,.layui-nav-child dd.layui-this{
+    /* background-color: rgba(2, 116, 183,.3); */
+    /* background-color: rgb(12,185,201); */
+    background-color: #393D49;
+}
+.layui-input{border-radius:4px;}
+.layui-input:focus{border-radius:4px;
+    border-color: #59aafe!important;}
+.tlb tr th,.tlb tr td{text-align: center;}
+.tlb_name{width: 100%;height: 13px;}
+.tlb_frime thead tr{background:#f2f2f2;color: #666}
+.layui-form-label{
+    padding: 9px 0px 9px 15px;
+    width: 70px;
+}
+.layui-input-block{
+    margin-left: 86px;
+}
+.search .policeUnits .layui-form-label{
+    width: 34px;
+}
+.search .policeUnits .layui-input-block{
+    margin-left: 65px;
+}
+.search .times .layui-form-label{
+    width: 84px;
+}
+.search .times .layui-input-block{
+    margin-left: 100px;
+}
+.layui-select-title input{
+    text-overflow:ellipsis;
+}
+.icons{
+    padding-top: 9px;
+    padding-left: 9px;
+}
+.icons .layui-btn{
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    box-sizing: border-box;
+    padding: 0;
+}
+.icons .layui-btn .layui-icon{
+    font-size: 16px;
+    margin-right: 0px;
+}
+/*.formt .layui-input-block{*/
+    /*width: 50%;*/
+/*}*/
+/*#thingBox .layui-input-block{*/
+    /*width: 70%;*/
+/*}*/
+#thingBox .layui-form-label{
+    color: #102051;
+}
+.titles {
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 80px;
+    position: absolute;
+    left: 43px;
+}
+.titlesBg {
+    top: 14px;
+    left: 35px;
+    background: url("../images/title.png") no-repeat;
+    width: 475px;
+    height: 48px;
+    position: absolute;
+}
+.layui-main .layui-nav .layui-nav-child dd.layui-this a{
+    background-color: #fff;
+    color: #000;
+}
+.layui-main .layui-nav .layui-nav-child dd.layui-this a:hover{
+    background-color: rgba(89,170,254,.2);
+}
+.layui-table-body .layui-table-main .layui-table-click{
+    background-color: #fff!important;
+    color: #000!important;
+}
+.layui-table-body .layui-table-main .layui-table-click:hover{
+    background-color: rgba(89,170,254,.2) !important;
+}
+/* 扩展 laydate 皮肤：gbw */
+.layui-laydate.laydate-theme-gbw, .layui-laydate-hint.laydate-theme-gbw{
+    border:1px solid #FFF;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.layui-laydate.laydate-theme-gbw{
+    border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    z-index: 19850126;
+}
+.laydate-theme-gbw .layui-laydate-header{
+    border-bottom:1px solid #e8e8e8;
+    padding-top:5px;
+    background:linear-gradient(rgba(24, 144, 255,.3),rgba(24, 144, 255,1));
+}
+.laydate-theme-gbw .layui-laydate-header i{font-size: 12px;color:rgba(0,0,0,.45)}
+.laydate-theme-gbw .layui-laydate-header span{color:rgba(0,0,0,.85);font-weight: 500;}
+.laydate-theme-gbw .layui-laydate-header i:hover, .laydate-theme-gbw .layui-laydate-header span:hover{
+    color:#40a9ff
+}
+.laydate-theme-gbw .layui-laydate-footer{border-top:0;padding-top: 0;height: 36px;}
+.laydate-theme-gbw .layui-laydate-footer span{border:none;background:linear-gradient(rgba(24, 144, 255,.3),rgba(24, 144, 255,1));color: #fff}
+.laydate-theme-gbw .layui-laydate-footer span:hover{background:linear-gradient(rgba(255, 245, 134,.3),rgba(255, 245, 134,1));}
+.laydate-theme-gbw .laydate-footer-btns{top:0;right: 68px; }
+.laydate-theme-gbw .layui-laydate-content th{color:rgba(0, 0, 0, 0.65);}
+.laydate-theme-gbw .layui-laydate-content td{
+    color: rgba(0, 0, 0, 0.65);
+    border-radius: 2px;
+    -webkit-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+.laydate-theme-gbw .layui-laydate-content .laydate-day-next, .laydate-theme-gbw .layui-laydate-content .laydate-day-prev{
+    color:rgba(0, 0, 0, 0.25)
+}
+.layui-laydate.laydate-theme-gbw td.layui-this{
+    background-color:transparent !important;
+    border:1px solid #1890ff;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #1890ff !important;
+}
+.layui-laydate.laydate-theme-gbw li.layui-this {
+    background-color: #1890ff!important;
+    color: #fff!important;
+    border-radius: 0;
+    border:0
+}
+#mycalendar{
+    height: 100%;
+}
+#mycalendar .layui-laydate{
+    height: 100% !important;
+    width: 100% !important;
+}
+#mycalendar .laydate-theme-molv .layui-laydate-main{
+    height: 91% !important;
+    width: 100% !important;
+}
+#mycalendar .laydate-theme-molv .layui-laydate-content{
+    height: 92% !important;
+}
+#mycalendar .layui-laydate-content table{
+    height: 100% !important;
+    width: 100% !important;
+}
+#mycalendar .laydate-theme-molv .layui-laydate-footer{
+    border: none;
+}
+#mycalendar .layui-laydate-footer span{border:none;background-color:#ff5722;color: #fff}
+#mycalendar .layui-laydate-footer span:hover{background:linear-gradient(rgba(255, 245, 134,.3),rgba(255, 245, 134,1));color: #ff5722}
+#mycalendar .laydate-footer-btns{top:3px;line-height: 23px;}
+.tb img{
+    padding-left: 40%;
+}
+.dataNow{
+    background-color: #101e54 !important;
+}
+.onlyRead{
+    cursor: default;
+    word-wrap:break-word;
+    border-color:#fff!important;
+}
+.onlyRead:hover{
+    border-color:#fff!important;
+}
+.onlyRead:focus{
+    border-color:#fff!important;
+}
+.layui-textarea{
+    min-height: 174px;
+}
+
+.layui-icon-export:before{
+    color: #333333;
+}
+.tools{
+    position: absolute;
+    bottom: 26px;
+    right: 11px;
+}
+.tools .tool{
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 4px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    transition: all 0.5s;
+}
+.tools .tool1{
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    line-height: 16px;
+    margin-right: 5px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+    transition: all 0.5s;
+}
+@media print {
+    .tlb_name,.search,.tools,.line{
+        display: none;
+    }
+    .layui-table th,.layui-table td{
+        border: 1px solid #cccccc;
+        color: #666666;
+    }
+}
+.layui-input, .layui-textarea{
+    padding-left: 6px;
+}
+@-webkit-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff,
+        0 0 20px  #fff,
+        0 0 30px  #fff,
+        0 0 40px  #228DFF,
+        0 0 70px  #228DFF,
+        0 0 80px  #228DFF,
+        0 0 100px #228DFF,
+        0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #228DFF,
+        0 0 35px #228DFF,
+        0 0 40px #228DFF,
+        0 0 50px #228DFF,
+        0 0 75px #228DFF;
+    }
+}
+@-moz-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff,
+        0 0 20px  #fff,
+        0 0 30px  #fff,
+        0 0 40px  #228DFF,
+        0 0 70px  #228DFF,
+        0 0 80px  #228DFF,
+        0 0 100px #228DFF,
+        0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #228DFF,
+        0 0 35px #228DFF,
+        0 0 40px #228DFF,
+        0 0 50px #228DFF,
+        0 0 75px #228DFF;
+    }
+}
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff,
+        0 0 20px  #fff,
+        0 0 30px  #fff,
+        0 0 40px  #228DFF,
+        0 0 70px  #228DFF,
+        0 0 80px  #228DFF,
+        0 0 100px #228DFF,
+        0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #228DFF,
+        0 0 35px #228DFF,
+        0 0 40px #228DFF,
+        0 0 50px #228DFF,
+        0 0 75px #228DFF;
+    }
+}
