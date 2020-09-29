@@ -332,13 +332,20 @@ function assignmentData(data) {
     $("input[name='icNumber']").val(data.icNumber);
     $("input[name='containerNumber']").val(data.containerNumber);
     $("select[name='department']").val(data.departmentId);
-    if(data.containerNumber == "all"){
-        formSelects.value("containerNumberSelectId",[1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
-    }else  if(!data.containerNumber){
-        formSelects.value("containerNumberSelectId",[]);
-    }else {
-        formSelects.value("containerNumberSelectId",data.containerNumber.split(","));
+    if(data.role ==2){
+    $("select[name='containerNumber']").val("");
+    $("select[name='containerNumber']").attr('disabled',"disabled")
+    }else{
+    $("select[name='containerNumber']").val(data.containerNumber);
+    $("select[name='containerNumber']").attr('disabled',false)
     }
+    // if(data.containerNumber == "all"){
+    //     formSelects.value("containerNumberSelectId",[1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
+    // }else  if(!data.containerNumber){
+    //     formSelects.value("containerNumberSelectId",[]);
+    // }else {
+    //     formSelects.value("containerNumberSelectId",data.containerNumber.split(","));
+    // }
 
 }
 

@@ -115,6 +115,7 @@ function insert() {
         cacheTableData[i].caseName = caseData.caseName;
         cacheTableData[i].undertakerDepartment = caseData.undertakerDepartment;
         cacheTableData[i].undertaker = caseData.undertaker;
+        cacheTableData[i].icNumber = caseData.icNumber;
     }
     _m.postJson("dossier/insert", cacheTableData).then(function (res) {
         if (res.code == 0) {

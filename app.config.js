@@ -3,15 +3,18 @@
  * 9000 端口 用 test
  * 8082 端口 用 prod
  * @type {'prod'|'test'|'dev'} */
-var ENVIRONMENT = 'test';
+// var ENVIRONMENT = 'test';
+var ENVIRONMENT = 'prod';
 
 var APIS = {
   test: {
-    API: 'http://192.168.3.30:8089/openApi/',
+    API: '/openApi/',
   },
 
   prod: {
+    // API: 'http://192.168.3.34:8089/',//杰哥
     API: 'http://192.168.3.134:8087/',
+    // API: 'http://192.168.3.30:8089/',
     
   },
 
