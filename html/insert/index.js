@@ -17,6 +17,13 @@ var table, layer, form, INSERT_WINDOW, caseData = {
         {documentType: '10', num: '0', description: '换押证'},
         {documentType: '11', num: '0', description: '认罪认罚材料'},
         {documentType: '12', num: '0', description: '辩护和代理材料'},
+        //2020/10/23新增5个选项
+        {documentType: '51', num: '0', description: '出庭通知书'},
+        {documentType: '52', num: '0', description: '上诉状'},
+        {documentType: '53', num: '0', description: '函'},
+        {documentType: '54', num: '0', description: '逮捕决定书'},
+        {documentType: '55', num: '0', description: '取保候审决定书回执'},
+
         {documentType: '13', num: '0', description: '其他材料'},
     ],
     cacheTableData = [
@@ -32,6 +39,13 @@ var table, layer, form, INSERT_WINDOW, caseData = {
         {documentType: '10', num: '5', description: '换押证'},
         {documentType: '11', num: '5', description: '认罪认罚材料'},
         {documentType: '12', num: '5', description: '辩护和代理材料'},
+        //2020/10/23新增5个选项
+        {documentType: '51', num: '0', description: '出庭通知书'},
+        {documentType: '52', num: '0', description: '上诉状'},
+        {documentType: '53', num: '0', description: '函'},
+        {documentType: '54', num: '0', description: '逮捕决定书'},
+        {documentType: '55', num: '0', description: '取保候审决定书回执'},
+        
         {documentType: '13', num: '5', description: '其他材料'},
     ];
 layui.use(['form', 'layer', 'laydate', 'table'], function () {

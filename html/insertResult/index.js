@@ -11,6 +11,12 @@ var table, layer, form, INIT_DATA = [
         {documentType: '10', num: '0', description: '换押证'},
         {documentType: '11', num: '0', description: '认罪认罚材料'},
         {documentType: '12', num: '0', description: '辩护和代理材料'},
+        //2020/10/23新增5个选项
+        {documentType: '51', num: '0', description: '出庭通知书'},
+        {documentType: '52', num: '0', description: '上诉状'},
+        {documentType: '53', num: '0', description: '函'},
+        {documentType: '54', num: '0', description: '逮捕决定书'},
+        {documentType: '55', num: '0', description: '取保候审决定书回执'},
         {documentType: '13', num: '0', description: '其他材料'},
     ], INSERT_WINDOW, caseData = {},
     INSERT_WINDOW_DATA = [
@@ -26,6 +32,13 @@ var table, layer, form, INIT_DATA = [
         {documentType: '10', num: '0', description: '换押证'},
         {documentType: '11', num: '0', description: '认罪认罚材料'},
         {documentType: '12', num: '0', description: '辩护和代理材料'},
+        //2020/10/23新增5个选项
+        // {documentType: '13', num: '0', description: '其他材料'},
+        {documentType: '51', num: '0', description: '出庭通知书'},
+        {documentType: '52', num: '0', description: '上诉状'},
+        {documentType: '53', num: '0', description: '函'},
+        {documentType: '54', num: '0', description: '逮捕决定书'},
+        {documentType: '55', num: '0', description: '取保候审决定书回执'},
         {documentType: '13', num: '0', description: '其他材料'},
     ],
     cacheTableData = [
@@ -41,6 +54,13 @@ var table, layer, form, INIT_DATA = [
         {documentType: '10', num: '5', description: '换押证'},
         {documentType: '11', num: '5', description: '认罪认罚材料'},
         {documentType: '12', num: '5', description: '辩护和代理材料'},
+        //2020/10/23新增5个选项
+        {documentType: '51', num: '5', description: '出庭通知书'},
+        {documentType: '52', num: '5', description: '上诉状'},
+        {documentType: '53', num: '5', description: '函'},
+        {documentType: '54', num: '5', description: '逮捕决定书'},
+        {documentType: '55', num: '5', description: '取保候审决定书回执'},
+
         {documentType: '13', num: '5', description: '其他材料'},
     ];
 layui.use(['form', 'layer', 'laydate', 'table'], function () {
@@ -63,7 +83,6 @@ layui.use(['form', 'layer', 'laydate', 'table'], function () {
 
     table.on('row(infoTableFilter)', function (obj) {
         var data = obj.data;
-
         if (data.num) {
             getCodeNumber(data.printLabelNumber);
         }
@@ -76,7 +95,7 @@ layui.use(['form', 'layer', 'laydate', 'table'], function () {
         elem: '#infoInsertTable',
         data: [],
         height: '300',
-        limit: 15,
+        limit: 20,
         isLastEdit:true,
         cols: [
             [
@@ -114,9 +133,20 @@ layui.use(['form', 'layer', 'laydate', 'table'], function () {
         obj.update({
             num: data.num
         });
+        if(parseInt(data.documentType)<13){
         cacheTableData[parseInt(data.documentType) - 1].num = data.num;
 
         cacheTableData[parseInt(data.documentType) - 1].description = data.description;
+        }
+        if(parseInt(data.documentType)===13){
+            cacheTableData[18].num = data.num;
+            cacheTableData[18].description = data.description;
+        }
+        if(parseInt(data.documentType)>13){
+            cacheTableData[parseInt(data.documentType) - 39].num = data.num;
+            cacheTableData[parseInt(data.documentType) - 39].description = data.description;
+        }
+        
         console.log(cacheTableData);
     });
 });
@@ -142,8 +172,8 @@ function showWindow() {
     for (var i in INSERT_WINDOW_DATA) {
         INSERT_WINDOW_DATA[i].num = 0;
     }
-    INSERT_WINDOW_DATA[12].documentType="13";
-    INSERT_WINDOW_DATA[12].description="其他材料";
+    // INSERT_WINDOW_DATA[12].documentType="13";
+    // INSERT_WINDOW_DATA[12].description="其他材料";
     cacheTableData = INSERT_WINDOW_DATA;
     table.reload('infoInsertTableId', {
         data: INSERT_WINDOW_DATA

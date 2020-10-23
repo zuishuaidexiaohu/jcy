@@ -145,7 +145,16 @@ layui.use(['form', 'layer', 'table', 'laydate', 'formSelects'], function () {
         }else {
             formSelects.value('containerNumberSelectId',[]);
         }
-
+        if(data.value ==2){
+            console.log(1111)
+            $("select[name='containerNumber']").val("");
+            $("select[name='containerNumber']").attr('disabled',true)
+        }else{
+            $("select[name='containerNumber']").val(data.containerNumber);
+            $("select[name='containerNumber']").attr('disabled',false)
+        }
+        form.render();
+        
     });
 
     form.on('select(departmentFilter)', function (data) {
